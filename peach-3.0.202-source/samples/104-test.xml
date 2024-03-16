@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+
+<DataModel name="Type1" >    
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" /> 
+			<Number name="Length" size="16" valueType="hex"  endian="network" mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68" endian="network" mutable="true"/>
+				<Block name="Type1">
+					<Number name="1" size="1" valueType="hex" value="0" mutable="false"/>
+					<Number name="NS" size="7" valueType="hex" value = "0" mutable="true"/>
+					<Number name="MSB1" size="8" valueType="hex" value = "0" mutable="true"/>
+					<Number name="3" size="1" valueType="hex"  value="0" mutable="false"/>
+					<Number name="NR" size="7" valueType="hex" value = "0" mutable="true"/>
+					<Number name="MSB2" size="8" valueType="hex" value = "0" mutable="true"/>
+				</Block>
+
+			<Number name="Link Address" size="8" valueType="hex" value = "01" endian="network" mutable="true"/>  
+			<Number name="Type Identifier" valueType="hex" size="8" value = "23" endian="network" mutable="true"/>
+			<Number name="Variable" valueType="hex" size="8" value = "34" endian="network" mutable="true"/>
+			<Number name="COT" valueType="hex" size="8" value = "45" endian="network" mutable="true" />
+			<Number name="ASDU address" valueType="hex" size="8" value = "75" endian="network" mutable="true"/>
+			<Blob name="Information Object"  valueType="hex" value="00000" mutable="true"/>
+			<Number name="check sum" valueType="hex" size="8" value = "12" endian="network" mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8" value = "26" endian="network" mutable="true"/>  
+</DataModel> 
+
+<DataModel name="Type2" > 
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true"/>
+			<Number name="Length" size="16" valueType="hex"   endian="network" mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68"  endian="network" mutable="true"/>
+			<Block name="Control filed">
+				<Number name="1" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="2" size="1" valueType="hex" value="0" mutable="false"/>
+				<Number name="NS" size="6" valueType="hex" value = "0"  mutable="false"/>
+				<Number name="MSB1" size="8" valueType="hex" value = "0"  mutable="false"/>
+				<Number name="3" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="NR" size="7" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="MSB2" size="8" valueType="hex"  value = "0"   mutable="false"/>
+			</Block>
+			<Number name="Link Address" size="8" valueType="hex"  value = "12"  endian="network" mutable="true"/> 
+			<Number name="Type Identifier" valueType="hex" size="8"  value = "25"  endian="network" mutable="true"/>
+			<Number name="Variable" valueType="hex" size="8"  value = "57"  endian="network" mutable="true"/>
+			<Number name="COT" valueType="hex" size="8"  value = "85"  endian="network" mutable="true"/>
+			<Number name="ASDU address" valueType="hex" size="8"  value = "63"  endian="network" mutable="true"/> 
+		<Blob naem="Information Object"  valueType="hex" value="0" mutable="true"/> 
+			<Number name="check sum" valueType="hex" size="8"  value = "27"  endian="network" mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8"  value = "24" endian="network" mutable="true"/> 
+</DataModel>
+
+<DataModel name="Type3" > 
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true"/>
+			<Number name="Length" size="16" valueType="hex"    endian="network" mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+			<Block name="Control filed">
+				<Number name="1" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="2" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="NS" size="6" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="MSB1" size="8" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="3" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="NR" size="7" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="MSB2" size="8" valueType="hex"  value = "0"  mutable="false"/>
+			</Block>
+			<Number name="Link Address" size="8" valueType="hex"  value = "61"  endian="network" mutable="true"/> 
+			<Number name="Type Identifier" valueType="hex" size="8"  value = "63"  endian="network" mutable="true"/>
+			<Number name="Variable" valueType="hex" size="8"  value = "92" endian="network" mutable="true"/>
+			<Number name="COT" valueType="hex" size="8"  value = "50" endian="network" mutable="true"/>
+			<Number name="ASDU address" valueType="hex" size="8"  value = "93" endian="network" mutable="true"/> 
+		<Blob naem="Information Object"  valueType="hex" value="00000"    mutable="true"/> 
+			<Number name="check sum" valueType="hex" size="8" value = "95"  endian="network" mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8"  value = "26" endian="network" mutable="true"/> 
+</DataModel>
+
+
+<StateModel name="ModbusStateModel" initialState="InitialState">
+		<State name="InitialState">
+			<Action type="output">
+				<DataModel ref="Type1" />
+			</Action>
+		</State>
+
+		<State name="InitialState2">
+			<Action type="output">
+				<DataModel ref="Type2" />
+			</Action>
+		</State>
+
+		<State name="InitialState3">
+			<Action type="output">
+				<DataModel ref="Type3" />
+			</Action>
+		</State>
+</StateModel>
+
+<Agent name="LinAgent" >
+			<Monitor class="Process">
+					<Param name="Executable" value="./poalr-104/Polar_104-master/test/iec104_monitor" />
+					<Param name="Arguments" value="-m server -p 31200 " />
+					<Param name="RestartOnEachTest" value="true" />
+			</Monitor>
+</Agent>
+
+<Test name="Default">
+	<Agent ref="LinAgent" platform="linux"/>
+	<StateModel ref="ModbusStateModel"/>
+	<Publisher class="Tcp">
+		<Param name="Host" value="127.0.0.1" />
+		<Param name="Port" value="31200" />
+	</Publisher>
+
+	<Logger class="Filesystem">
+		<Param name="Path" value="Logs" />
+	</Logger>
+</Test>
+
+
+</Peach>
+<!-- end -->

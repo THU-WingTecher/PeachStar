@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+
+<DataModel name="Type1" >    
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" /> 
+			<Number name="len" size="8" valueType="hex"  endian="network" />
+			<Number name="sequence_num(send)" size="16" valueType="hex" value = "00" endian="network" /> 
+            <Number name="sequence_num(recv)" size="16" valueType="hex" value = "00" endian="network" /> 
+
+			<Block name = "ID">
+                <Number name="TypeID" size="8" valueType="hex" value = "0" endian="network" />
+                <Number name="SQ" size="1" valueType="hex" value = "0"  endian="network" />
+                <Number name="NumberofObject" size="7" valueType="hex" value = "0"  endian="network" />  
+                <Number name="T" size="1" valueType="hex" value = "0"  endian="network" />
+                <Number name="P/N" size="1" valueType="hex" value = "0"  endian="network" />
+                <Number name="CauseofTranssion" valueType="hex" size="6" value = "0"  endian="network" />
+                <Number name="OriginatorAddress" valueType="hex" size="8" value = "0" endian="network" />
+            </Block> 
+
+			<Blob name = "Taler" size = "90" valueType = "hex" endian = "network"/> 
+</DataModel> 
+
+<DataModel name="Type2" >    
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" /> 
+			<Number name="len" size="8" valueType="hex"  endian="network" />
+			<Number name="sequence_num(send)" size="16" valueType="hex" value = "00" endian="network" /> 
+            <Number name="sequence_num(recv)" size="16" valueType="hex" value = "00" endian="network" /> 
+
+			<Block name = "ID">
+                <Number name="TypeID" size="8" valueType="hex" value = "1" endian="network" />
+                <Number name="SQ" size="1" valueType="hex" value = "0"  endian="network" />
+                <Number name="NumberofObject" size="7" valueType="hex" value = "0"  endian="network" />  
+                <Number name="T" size="1" valueType="hex" value = "0"  endian="network" />
+                <Number name="P/N" size="1" valueType="hex" value = "0"  endian="network" />
+                <Number name="CauseofTranssion" valueType="hex" size="6" value = "0"  endian="network" />
+                <Number name="OriginatorAddress" valueType="hex" size="8" value = "0" endian="network" />
+            </Block> 
+
+			<Blob name = "Taler" size = "90" valueType = "hex" endian = "network"/> 
+</DataModel> 
+
+<DataModel name="Type3" >    
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" /> 
+			<Number name="len" size="8" valueType="hex"  endian="network" />
+			<Number name="sequence_num(send)" size="16" valueType="hex" value = "00" endian="network" /> 
+            <Number name="sequence_num(recv)" size="16" valueType="hex" value = "00" endian="network" /> 
+
+			<Block name = "ID">
+                <Number name="TypeID" size="8" valueType="hex" value = "1" endian="network" />
+                <Number name="SQ" size="1" valueType="hex" value = "1"  endian="network" />
+                <Number name="NumberofObject" size="7" valueType="hex" value = "0"  endian="network" />  
+                <Number name="T" size="1" valueType="hex" value = "0"  endian="network" />
+                <Number name="P/N" size="1" valueType="hex" value = "0"  endian="network" />
+                <Number name="CauseofTranssion" valueType="hex" size="6" value = "0"  endian="network" />
+                <Number name="OriginatorAddress" valueType="hex" size="8" value = "0" endian="network" />
+            </Block> 
+
+			<Blob name = "Taler" size = "90" valueType = "hex" endian = "network"/> 
+</DataModel> 
+
+
+<StateModel name="ModbusStateModel" initialState="InitialState">
+    <State name="InitialState">
+        <Action type="output">
+            <DataModel ref="Type1" />
+        </Action>
+    </State>
+
+    <State name="InitialState2">
+        <Action type="output">
+            <DataModel ref="Type2" />
+        </Action>
+    </State>
+
+    <State name="InitialState3">
+        <Action type="output">
+            <DataModel ref="Type3" />
+        </Action>
+    </State>
+</StateModel>
+
+<Agent name="LinAgent" >
+    <Monitor class="Process">
+            <Param name="Executable" value="./lib60870/lib60870/lib60870-C/examples/cs104_server/simple_server" />
+            <!-- <Param name="Arguments" value=" 10 10" /> -->
+            <Param name="RestartOnEachTest" value="true" />
+    </Monitor>
+</Agent>
+
+<Test name="Default">
+	<Agent ref="LinAgent" platform="linux"/>
+	<StateModel ref="ModbusStateModel"/>
+	<!-- <Publisher class="Tcp">
+		<Param name="Host" value="127.0.0.1" />
+		<Param name="Port" value="12834" />
+	</Publisher>  -->
+    
+  <Publisher class="Null" />
+	<Logger class="Filesystem">
+		<Param name="Path" value="Logs" />
+	</Logger>
+</Test>
+
+
+</Peach>
+<!-- end -->

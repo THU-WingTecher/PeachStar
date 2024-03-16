@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+deps = [
+	'NLog.dll',
+	'nunit.framework.dll',
+	'System.dll',
+	'System.Core.dll',
+	'System.Runtime.Remoting.dll',
+	'System.Xml.dll',
+	'Peach.Core.dll',
+	'Microsoft.Scripting.dll',
+	'Microsoft.Scripting.Metadata.dll',
+	'IronPython.dll',
+	'IronPython.Modules.dll',
+]
+
+bld(
+	features = 'cs test',
+	use = deps,
+	source = bld.path.ant_glob('**/*.cs'),
+	name = 'Peach.Core.Test.dll',
+)

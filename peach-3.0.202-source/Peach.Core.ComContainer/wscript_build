@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+deps = [
+	'NLog.dll',
+	'System.Runtime.Remoting.dll',
+	'System.dll',
+	'System.Management.dll',
+	'System.Xml.dll',
+	'System.Core.dll',
+	'System.Data.dll',
+	'IronPython.dll',
+	'IronPython.Modules.dll',
+	'IronRuby.dll',
+	'IronRuby.Libraries.dll',
+	'IronRuby.Libraries.Yaml.dll',
+	'Microsoft.Dynamic.dll',
+	'Microsoft.CSharp.dll',
+	'Microsoft.Scripting.dll',
+	'Microsoft.Scripting.Metadata.dll',
+	'Peach.Core.dll',
+	'Peach.Core.OS.Windows.dll',
+]
+
+bld(
+	features = 'cs win',
+	use = deps,
+	source = bld.path.ant_glob('**/*.cs'),
+	name='Peach.Core.ComContainer.exe',
+)

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+
+
+	<DataModel name="104" >
+        <Block name="Header">
+		  <Number name="proto_id" size="8"  value="68" valueType="hex"  endian="network" mutable="false" />
+		  <!-- len = PDU + 1 (unit_id) -->
+		  <Number name="len" size="8" value="04" valueType="hex" endian="network">
+			<Relation type="size" of="PDU" />
+		  </Number>
+		</Block>
+
+		<Block name="PDU">
+		  <Number name="func_code" size="8" value="83" valueType="hex" endian="network" mutable="true" />
+		  <Blob name="Unknown1" valueType="hex" value="000000" mutable="true"/>
+		</Block>
+
+	</DataModel>
+
+	<StateModel name="ModbusStateModel" initialState="InitialState">
+		<State name="InitialState">
+			<Action type="output">
+				<DataModel ref="104" />
+			</Action> 
+		</State>
+	</StateModel>
+		
+
+    <Agent name="LinAgent">
+		<Monitor class="LinuxDebugger">
+			<Param name="Executable" value="./poalr-104/Polar_104-master/test/iec104_monitor" />
+			<Param name="Arguments" value="-m server -p 10001" />
+			<!--<Param name="GdbPath" value="/path/to/gdb" />-->
+		</Monitor>
+	</Agent>
+
+	<Test name="Default">
+        <Agent ref="LinAgent" platform="linux"/>
+		<StateModel ref="ModbusStateModel"/>
+		
+        
+
+        <Publisher class="Tcp">
+			<Param name="Host" value="127.0.0.1" />
+			<Param name="Port" value="10000" />
+		</Publisher>
+
+        <Publisher class="ConsoleHex"/>
+        
+        <Logger class="Filesystem">
+			<Param name="Path" value="Logs" />
+		</Logger>
+	</Test>
+
+<!--	<Test name="Default">
+		<StateModel ref="ModbusStateModel" />
+					
+		<Publisher class="tcp.Tcp">
+			<Param name="Host" value="192.168.1.1"/>
+			<Param name="Port" value="502"/>
+		</Publisher>
+	</Test>-->
+
+</Peach>
+<!-- end -->

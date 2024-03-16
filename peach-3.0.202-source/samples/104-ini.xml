@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+
+
+<DataModel name="Type1" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="11" size="8" valueType="hex" value="7" mutable="false"/>
+					<Number name="21" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="31" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="41" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+
+<DataModel name="Type2" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="12" size="8" valueType="hex" value="13" mutable="false"/>
+					<Number name="22" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="32" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="42" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+<DataModel name="Type3" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="13" size="8" valueType="hex" value="a1" mutable="false"/>
+					<Number name="23" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="33" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="43" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+<DataModel name="Type4" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="14" size="8" valueType="hex" value="43" mutable="false"/>
+					<Number name="24" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="34" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="44" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+<DataModel name="Type5" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="15" size="8" valueType="hex" value="23" mutable="false"/>
+					<Number name="25" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="35" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="45" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+<DataModel name="Type6" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="16" size="8" valueType="hex" value="83" mutable="false"/>
+					<Number name="26" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="36" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="46" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+<DataModel name="Type7" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="17" size="8" valueType="hex" value="64" mutable="false"/>
+					<Number name="27" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="37" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="47" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+<DataModel name="Type8" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="18" size="8" valueType="hex" value="67" mutable="false"/>
+					<Number name="28" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="38" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="48" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+<DataModel name="Type9" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="19" size="8" valueType="hex" value="30" mutable="false"/>
+					<Number name="29" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="39" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="49" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+<DataModel name="Type0" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="10" size="8" valueType="hex" value="32" mutable="false"/>
+					<Number name="20" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="30" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="04" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+<DataModel name="Type111" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="111" size="8" valueType="hex" value="80" mutable="false"/>
+					<Number name="211" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="311" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="411" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+<DataModel name="Type112" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="false" />
+			<Number name="Length" size="8" valueType="hex"  endian="network"  mutable="true"/> 
+				<Block name="Type1">
+
+					<Number name="112" size="8" valueType="hex" value="81" mutable="false"/>
+					<Number name="212" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="312" size="8" valueType="hex" value="0" mutable="true"/>
+					<Number name="412" size="8" valueType="hex" value="0" mutable="false"/>
+ 
+				</Block>
+ 
+</DataModel>
+
+
+<DataModel name="Type103" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+			<Number name="Length" size="16" valueType="hex"    endian="network"  mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68"  endian="network"  mutable="true"/>
+			<Block name="Control filed">
+				<Number name="31" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="23" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="3NS" size="6" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="M3SB1" size="8" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="33" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="33NR" size="7" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="MS3B2" size="8" valueType="hex"  value = "0"  mutable="false"/>
+			</Block>
+			<Number name="Link Address" size="8" valueType="hex"  value = "83"  endian="network"  mutable="true"/>
+			<Number name="Type Identifier" valueType="hex" size="8"  value = "63"  endian="network" mutable="true" />
+			<Number name="Variable" valueType="hex" size="8"  value = "92" endian="network"  mutable="true"/>
+			<Number name="COT" valueType="hex" size="8"  value = "50" endian="network"  mutable="true"/>
+			<Number name="ASDU address" valueType="hex" size="8"  value = "93" endian="network" mutable="true" />
+		<Blob naem="Information Object"  valueType="hex" value="00000"    mutable="true"/>
+			<Number name="check sum" valueType="hex" size="8" value = "95"  endian="network"  mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8"  value = "26" endian="network" mutable="true" />
+</DataModel>
+
+<DataModel name="Type1103" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+			<Number name="Length" size="16" valueType="hex"    endian="network"  mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68"  endian="network"  mutable="true"/>
+			<Block name="Control filed">
+				<Number name="131" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="123" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="13NS" size="6" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="1M3SB1" size="8" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="133" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="133NR" size="7" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="1MS3B2" size="8" valueType="hex"  value = "0"  mutable="false"/>
+			</Block>
+			<Number name="Link A1ddress" size="8" valueType="hex"  value = "81"  endian="network"  mutable="true"/>
+			<Number name="Type Identifier" valueType="hex" size="8"  value = "63"  endian="network" mutable="true" />
+			<Number name="Variable" valueType="hex" size="8"  value = "92" endian="network"  mutable="true"/>
+			<Number name="COT" valueType="hex" size="8"  value = "50" endian="network"  mutable="true"/>
+			<Number name="ASDU address" valueType="hex" size="8"  value = "93" endian="network" mutable="true" />
+		<Blob naem="Information Object"  valueType="hex" value="00000"    mutable="true"/>
+			<Number name="check sum" valueType="hex" size="8" value = "95"  endian="network"  mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8"  value = "26" endian="network" mutable="true" />
+</DataModel>
+
+<DataModel name="Type1203" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+			<Number name="Length" size="16" valueType="hex"    endian="network"  mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68"  endian="network"  mutable="true"/>
+			<Block name="Control filed">
+				<Number name="231" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="223" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="23NS" size="6" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="2M3SB1" size="8" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="233" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="233NR" size="7" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="2MS3B2" size="8" valueType="hex"  value = "0"  mutable="false"/>
+			</Block>
+			<Number name="Link2 Address" size="8" valueType="hex"  value = "80"  endian="network"  mutable="false"/>
+			<Number name="Type Identifier" valueType="hex" size="8"  value = "63"  endian="network" mutable="true" />
+			<Number name="Variable" valueType="hex" size="8"  value = "92" endian="network"  mutable="true"/>
+			<Number name="COT" valueType="hex" size="8"  value = "50" endian="network"  mutable="true"/>
+			<Number name="ASDU address" valueType="hex" size="8"  value = "93" endian="network" mutable="true" />
+		<Blob naem="Information Object"  valueType="hex" value="00000"    mutable="true"/>
+			<Number name="check sum" valueType="hex" size="8" value = "95"  endian="network"  mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8"  value = "26" endian="network" mutable="true" />
+</DataModel>
+
+<DataModel name="Type1033" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+			<Number name="Length" size="16" valueType="hex"    endian="network"  mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68"  endian="network"  mutable="true"/>
+			<Block name="Control filed">
+				<Number name="331" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="323" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="33NS" size="6" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="3M3SB1" size="8" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="333" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="333NR" size="7" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="3MS3B2" size="8" valueType="hex"  value = "0"  mutable="false"/>
+			</Block>
+			<Number name="Link3 Address" size="8" valueType="hex"  value = "32"  endian="network"  mutable="false"/>
+			<Number name="Type Identifier" valueType="hex" size="8"  value = "63"  endian="network" mutable="true" />
+			<Number name="Variable" valueType="hex" size="8"  value = "92" endian="network"  mutable="true"/>
+			<Number name="COT" valueType="hex" size="8"  value = "50" endian="network"  mutable="true"/>
+			<Number name="ASDU address" valueType="hex" size="8"  value = "93" endian="network" mutable="true" />
+		<Blob naem="Information Object"  valueType="hex" value="00000"    mutable="true"/>
+			<Number name="check sum" valueType="hex" size="8" value = "95"  endian="network"  mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8"  value = "26" endian="network" mutable="true" />
+</DataModel>
+
+<DataModel name="Type1043" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+			<Number name="Length" size="16" valueType="hex"    endian="network"  mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68"  endian="network"  mutable="true"/>
+			<Block name="Control filed">
+				<Number name="431" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="423" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="43NS" size="6" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="4M3SB1" size="8" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="433" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="433NR" size="7" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="4MS3B2" size="8" valueType="hex"  value = "0"  mutable="false"/>
+			</Block>
+			<Number name="Lin4k Address" size="8" valueType="hex"  value = "30"  endian="network"  mutable="false"/>
+			<Number name="Type Identifier" valueType="hex" size="8"  value = "63"  endian="network" mutable="true" />
+			<Number name="Variable" valueType="hex" size="8"  value = "92" endian="network"  mutable="true"/>
+			<Number name="COT" valueType="hex" size="8"  value = "50" endian="network"  mutable="true"/>
+			<Number name="ASDU address" valueType="hex" size="8"  value = "93" endian="network" mutable="true" />
+		<Blob naem="Information Object"  valueType="hex" value="00000"    mutable="true"/>
+			<Number name="check sum" valueType="hex" size="8" value = "95"  endian="network"  mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8"  value = "26" endian="network" mutable="true" />
+</DataModel>
+
+<DataModel name="Type1053" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+			<Number name="Length" size="16" valueType="hex"    endian="network"  mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68"  endian="network"  mutable="true"/>
+			<Block name="Control filed">
+				<Number name="531" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="523" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="53NS" size="6" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="5M3SB1" size="8" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="533" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="533NR" size="7" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="5MS3B2" size="8" valueType="hex"  value = "0"  mutable="false"/>
+			</Block>
+			<Number name="Lin5k Address" size="8" valueType="hex"  value = "67"  endian="network"  mutable="false"/>
+			<Number name="Type Identifier" valueType="hex" size="8"  value = "63"  endian="network" mutable="true" />
+			<Number name="Variable" valueType="hex" size="8"  value = "92" endian="network"  mutable="true"/>
+			<Number name="COT" valueType="hex" size="8"  value = "50" endian="network"  mutable="true"/>
+			<Number name="ASDU address" valueType="hex" size="8"  value = "93" endian="network" mutable="true" />
+		<Blob naem="Information Object"  valueType="hex" value="00000"    mutable="true"/>
+			<Number name="check sum" valueType="hex" size="8" value = "95"  endian="network"  mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8"  value = "26" endian="network" mutable="true" />
+</DataModel>
+
+<DataModel name="Type1063" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+			<Number name="Length" size="16" valueType="hex"    endian="network"  mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68"  endian="network"  mutable="true"/>
+			<Block name="Control filed">
+				<Number name="631" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="623" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="63NS" size="6" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="6M3SB1" size="8" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="633" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="633NR" size="7" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="6MS3B2" size="8" valueType="hex"  value = "0"  mutable="false"/>
+			</Block>
+			<Number name="Li6nk Address" size="8" valueType="hex"  value = "64"  endian="network"  mutable="false"/>
+			<Number name="Type Identifier" valueType="hex" size="8"  value = "63"  endian="network" mutable="true" />
+			<Number name="Variable" valueType="hex" size="8"  value = "92" endian="network"  mutable="true"/>
+			<Number name="COT" valueType="hex" size="8"  value = "50" endian="network"  mutable="true"/>
+			<Number name="ASDU address" valueType="hex" size="8"  value = "93" endian="network" mutable="true" />
+		<Blob naem="Information Object"  valueType="hex" value="00000"    mutable="true"/>
+			<Number name="check sum" valueType="hex" size="8" value = "95"  endian="network"  mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8"  value = "26" endian="network" mutable="true" />
+</DataModel>
+
+
+<DataModel name="Type1214" >
+			<Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+			<Number name="Length" size="16" valueType="hex"    endian="network"  mutable="true"/>
+			<Number name="Start Charac" size="8" valueType="hex" value = "68"  endian="network"  mutable="true"/>
+			<Number name = "functionC" Length = "4" valueType = "hex" endian="network"  mutable = "true"/>
+			<!-- <Block name="Control filed">
+				<Number name="31" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="23" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="3NS" size="6" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="M3SB1" size="8" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="33" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="33NR" size="7" valueType="hex"  value = "0"  mutable="false"/>
+				<Number name="MS3B2" size="8" valueType="hex"  value = "0"  mutable="false"/>
+			</Block> -->
+			<Number name="Link Address" size="8" valueType="hex"  value = "61"  endian="network"  mutable="false"/>
+			<Number name="Type Identifier" valueType="hex" size="8"  value = "63"  endian="network" mutable="true" />
+			<Number name="Variable" valueType="hex" size="8"  value = "92" endian="network"  mutable="true"/>
+			<Number name="COT" valueType="hex" size="8"  value = "50" endian="network"  mutable="true"/>
+			<Number name="ASDU address" valueType="hex" size="8"  value = "93" endian="network" mutable="true" />
+			<Blob naem="Information Object"  valueType="hex" value="00000"    mutable="true"/>
+			<Number name="check sum" valueType="hex" size="8" value = "95"  endian="network"  mutable="true"/>
+			<Number name="stop char" valueType="hex" size="8"  value = "26" endian="network" mutable="true" />
+</DataModel>
+
+<StateModel name="ModbusStateModel" initialState="InitialState">
+		<State name="InitialState">
+			<Action type="output">
+				<DataModel ref="Type1" />
+			</Action>
+		</State>
+
+		<State name="InitialState2">
+			<Action type="output">
+				<DataModel ref="Type2" />
+			</Action>
+		</State>
+
+		<State name="InitialState3">
+			<Action type="output">
+				<DataModel ref="Type3" />
+			</Action>
+		</State>
+
+
+		<State name="InitialState4">
+			<Action type="output">
+				<DataModel ref="Type4" />
+			</Action>
+		</State>
+
+		<State name="InitialState5">
+			<Action type="output">
+				<DataModel ref="Type5" />
+			</Action>
+		</State>
+		<State name="InitialState6">
+			<Action type="output">
+				<DataModel ref="Type6" />
+			</Action>
+		</State>
+		<State name="InitialState7">
+			<Action type="output">
+				<DataModel ref="Type7" />
+			</Action>
+		</State>
+		<State name="InitialState8">
+			<Action type="output">
+				<DataModel ref="Type8" />
+			</Action>
+		</State>
+		<State name="InitialState9">
+			<Action type="output">
+				<DataModel ref="Type9" />
+			</Action>
+		</State>
+		<State name="InitialState10">
+			<Action type="output">
+				<DataModel ref="Type103" />
+			</Action>
+		</State>
+		<State name="InitialState11">
+			<Action type="output">
+				<DataModel ref="Type111" />
+			</Action>
+		</State>
+		<State name="InitialState12">
+			<Action type="output">
+				<DataModel ref="Type112" />
+			</Action>
+		</State>
+		<State name="InitialState13">
+			<Action type="output">
+				<DataModel ref="Type0" />
+			</Action>
+		</State>
+		<State name="InitialState143">
+			<Action type="output">
+				<DataModel ref="Type1103" />
+			</Action>
+		</State>
+		<State name="InitialState153">
+			<Action type="output">
+				<DataModel ref="Type1203" />
+			</Action>
+		</State>
+		<State name="InitialState163">
+			<Action type="output">
+				<DataModel ref="Type1033" />
+			</Action>
+		</State>
+		<State name="InitialStat17e3">
+			<Action type="output">
+				<DataModel ref="Type1043" />
+			</Action>
+		</State>
+		<State name="InitialState183">
+			<Action type="output">
+				<DataModel ref="Type1053" />
+			</Action>
+		</State>
+		<State name="InitialStat19e3">
+			<Action type="output">
+				<DataModel ref="Type1063" />
+			</Action>
+		</State>
+		<State name="InitialState213">
+			<Action type="output">
+				<DataModel ref="Type1214" />
+			</Action>
+		</State> 
+
+</StateModel>
+
+
+<Agent name="LinAgent" >
+			<Monitor class="Process">
+					<Param name="Executable" value="./poalr-104/Polar_104-master/test/iec104_monitor" />
+					<Param name="Arguments" value="-m server -p 11220 " />
+					<Param name="RestartOnEachTest" value="true" />
+			</Monitor>
+</Agent>
+
+<Test name="Default">
+	<Agent ref="LinAgent" platform="linux"/>
+	<StateModel ref="ModbusStateModel"/>
+	<Publisher class="Tcp">
+		<Param name="Host" value="127.0.0.1" />
+		<Param name="Port" value="11220" />
+	</Publisher>
+
+	<Logger class="Filesystem">
+		<Param name="Path" value="Logs" />
+	</Logger>
+</Test>
+
+
+</Peach>
+<!-- end -->

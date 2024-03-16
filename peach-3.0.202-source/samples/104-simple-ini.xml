@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+
+<DataModel name="Type1" >    
+            <Blob name = "header" size = "32" valueType = "hex" value = "68000068" endian="network" />
+				<Block name="Type1">
+					<Number name="1" size="1" valueType="hex" value="0" mutable="false"/>
+					<Number name="NS" size="7" valueType="hex" value = "0000000" mutable="true"/>
+					<Number name="MSB1" size="8" valueType="hex" value = "00000000" mutable="true"/>
+					<Number name="3" size="1" valueType="hex"  value="0" mutable="false"/>
+					<Number name="NR" size="7" valueType="hex" value = "0000000" mutable="true"/>
+					<Number name="MSB2" size="8" valueType="hex" value = "00000000" mutable="true"/>
+				</Block>
+            <Blob name = "Data" size = "72" valueType = "hex" value = "000000" endian="network" />  
+</DataModel> 
+
+<DataModel name="Type2" > 
+            <Blob name = "header" size = "32" valueType = "hex" value = "68000068" endian="network" />
+			<Block name="Control filed">
+				<Number name="1" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="2" size="1" valueType="hex" value="0" mutable="false"/>
+				<Number name="NS" size="6" valueType="hex" value = "000000"  mutable="false"/>
+				<Number name="MSB1" size="8" valueType="hex" value = "00000000"  mutable="false"/>
+				<Number name="3" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="NR" size="7" valueType="hex"  value = "0000000"  mutable="false"/>
+				<Number name="MSB2" size="8" valueType="hex"  value = "00000000"   mutable="false"/>
+			</Block>
+            <Blob name = "Data" size = "72" valueType = "hex" value = "000000"  endian="network" /> 
+</DataModel>
+
+<DataModel name="Type3" > 
+			<Blob name = "header" size = "32" valueType = "hex" value = "68000068" endian="network" />
+            <Block name="Control filed">
+				<Number name="1" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="2" size="1" valueType="hex" value="1" mutable="false"/>
+				<Number name="NS" size="6" valueType="hex"  value = "000000"  mutable="false"/>
+				<Number name="MSB1" size="8" valueType="hex"  value = "00000000"  mutable="false"/>
+				<Number name="3" size="1" valueType="hex"  value="0" mutable="false"/>
+				<Number name="NR" size="7" valueType="hex"  value = "0000000"  mutable="false"/>
+				<Number name="MSB2" size="8" valueType="hex"  value = "00000000"  mutable="false"/>
+			</Block>
+            <Blob name = "Data" size = "72" valueType = "hex" value = "000000"  endian="network" /> 
+</DataModel>
+
+
+<StateModel name="ModbusStateModel" initialState="InitialState">
+		<State name="InitialState">
+			<Action type="output">
+				<DataModel ref="Type1" />
+			</Action>
+		</State>
+
+		<State name="InitialState2">
+			<Action type="output">
+				<DataModel ref="Type2" />
+			</Action>
+		</State>
+
+		<State name="InitialState3">
+			<Action type="output">
+				<DataModel ref="Type3" />
+			</Action>
+		</State>
+</StateModel>
+
+<Agent name="LinAgent" >
+			<Monitor class="Process">
+					<Param name="Executable" value="./poalr-104/Polar_104-master/test/iec104_monitor" />
+					<Param name="Arguments" value="-m server -p 11320 " />
+					<Param name="RestartOnEachTest" value="true" />
+			</Monitor>
+</Agent>
+
+<Test name="Default">
+	<Agent ref="LinAgent" platform="linux"/>
+	<StateModel ref="ModbusStateModel"/>
+	<Publisher class="Tcp">
+		<Param name="Host" value="127.0.0.1" />
+		<Param name="Port" value="11320" />
+	</Publisher>
+
+	<Logger class="Filesystem">
+		<Param name="Path" value="Logs" />
+	</Logger>
+</Test>
+
+
+</Peach>
+<!-- end -->

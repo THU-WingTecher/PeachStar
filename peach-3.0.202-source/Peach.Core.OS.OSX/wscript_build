@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+deps = [
+	'Peach.Core.dll',
+	'System.dll',
+	'System.Core.dll',
+	'System.Xml.dll',
+	'NLog.dll',
+	'Mono.Posix.dll',
+]
+
+bld(
+	features = 'cs osx',
+	use = deps,
+	source = bld.path.ant_glob('**/*.cs'),
+	name='Peach.Core.OS.OSX.dll',
+)

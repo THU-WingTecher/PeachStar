@@ -1,0 +1,68 @@
+# See https://github.com/github/gitignore/blob/master/CSharp.gitignore
+
+# Build folders
+# Ignore top level directories and one level deep
+# This allows bin/obj folders to not be ignored in 3rdParty
+/*/[Bb]in/
+/*/[Oo]bj/
+
+/3rdParty/TreeViewAdv/*/[Bb]in/
+/3rdParty/TreeViewAdv/*/[Oo]bj/
+/3rdParty/Be.HexEditor.150/sources/*/[Bb]in/
+/3rdParty/Be.HexEditor.150/sources/*/[Oo]bj/
+/3rdParty/Be.HexEditor.150/sources/*/*.xml
+
+/3rdParty/xml-rpc.net-2.5.0/[Bb]in/
+/3rdParty/xml-rpc.net-2.5.0/[Oo]bj/
+/3rdParty/xml-rpc.net-2.5.0/*/[Bb]in/
+/3rdParty/xml-rpc.net-2.5.0/*/[Oo]bj/
+/3rdParty/xml-rpc.net-2.5.0/samples/*/[Bb]in/
+/3rdParty/xml-rpc.net-2.5.0/samples/*/[Oo]bj/
+
+# User-specific files
+*.user
+
+# Build results
+# Ignore top level directories and one level deep
+# This allows debug/release folders to not be ignored in 3rdParty
+/[Dd]ebug/
+/*/[Dd]ebug/
+/[Rr]elease/
+/*/[Rr]elease/
+/x64/
+/*/x64/
+
+# Visual Studio generated files
+/ComTest/idl/
+
+# Visual C++ cache files
+/ipch/
+/*.aps
+/*.ncb
+/*.opensdf
+/*.sdf
+/*.suo
+
+# python generated files
+*.pyc
+
+# waf build artifacts
+/.lock-waf*
+/slag/
+/output/
+
+# MonoDevelop files
+*.pidb
+Peach.net.userprefs
+test-results/
+*.resources
+
+/3rdParty/NUnit-2.6.0.12051/bin/TestResult.xml
+
+_ReSharper.Peach.net/*
+
+# peach star
+/Logs/
+control.so
+libpeachControl.so
+peachControl.so

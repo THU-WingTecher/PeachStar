@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+
+deps = [
+	'NLog.dll',
+	'SharpPcap.dll',
+	'ZeroMQ.dll',
+	'System.Runtime.Remoting.dll',
+	'System.dll',
+	'System.Management.dll',
+	'System.Xml.dll',
+	'System.Core.dll',
+	'System.Data.dll',
+	'System.Web.dll',
+	'System.Web.Services.dll',
+	'Ionic.Zip.dll',
+	'IronPython.dll',
+	'IronRuby.dll',
+	'IronRuby.Libraries.dll',
+	'IronRuby.Libraries.Yaml.dll',
+	'Microsoft.Dynamic.dll',
+	'Microsoft.CSharp.dll',
+	'Microsoft.Scripting.dll',
+	'Microsoft.Scripting.Metadata.dll',
+	'Renci.SshNet.dll',
+]
+
+if bld.env['IS_MONO'] == 'True':
+	deps.append('Mono.Posix.dll')
+
+bld(
+	features = 'cs',
+	use = deps,
+	source = bld.path.ant_glob('**/*.cs'),
+	resource = 'peach.xsd xmltests.zip',
+	install = 'peach.xsd',
+	name = 'Peach.Core.dll',
+)

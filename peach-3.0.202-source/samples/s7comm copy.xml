@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+
+ 	<DataModel name="Type1" >
+        <Number name = "Protocol_id" Length = "1" valueType="hex" endian="network"  mutable="true"/>
+        <Number name = "request" Length = "1" valueType="hex" endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false"/>
+        <Number name = "Error_class" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "Error_code" Length = "1" valueType="hex" endian="network"  mutable="true"/>
+
+        <Number name = "FunctionCod1e" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "ietm_coun1t" Length = "1" valueType="hex"   endian="network"  mutable="false"/>
+        <Number name = "SpecificationTy1pe" Length = "1" valueType="hex" endian="network" mutable="false" />
+        <Number name = "le1n" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "SyataxI1D" Length = "1" valueType="hex"   endian="network" mutable="false" />
+        <Number name = "Transport1Sizes" Length = "1" valueType="hex"  endian="network" mutable="false" />
+        <Number name = "RequesetDat1aLength" Length = "2" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "DBnumbe1r" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Ae1ra" Length = "2" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "Addre1ss" Length = "3" valueType="hex"  endian="network"  mutable="false"/>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data" Length = "4" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "FillByte" Length = "1" valueType="hex" endian="network" mutable="true" />
+	</DataModel>
+
+    <DataModel name="Type2" >
+        <Number name = "Protocol_id" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "ACK" Length = "1" valueType="hex" endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex" endian="network"  mutable="true"/>
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false"/>
+        <Number name = "Error_class" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "Error_code" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+
+        <Number name = "FunctionCode2" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "ietm_cou2nt" Length = "1" valueType="hex"   endian="network" mutable="false" />
+        <Number name = "SpecificationT2ype" Length = "1" valueType="hex" endian="network" mutable="false" />
+        <Number name = "le2n" Length = "1" valueType="hex" endian="network" mutable = "false"/>
+        <Number name = "SyataxI2D" Length = "1" valueType="hex" endian="network"  mutable="false"/>
+        <Number name = "TransportSizes2" Length = "1" valueType="hex" endian="network" mutable="false" />
+        <Number name = "RequesetDataLength2" Length = "2" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "DBnumber2" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Aera2" Length = "2" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "Address2" Length = "3" valueType="hex" endian="network"  mutable="false"/>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data" Length = "4" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "FillByte" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+	</DataModel>
+
+    <DataModel name="Type3" >
+        <Number name = "Protocol_id" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "ACK_DATA" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex" endian="network"  mutable="true"/>
+        <Number name = "PUD_Reference" Length = "2" valueType="hex" endian="network" mutable="true" />
+        <Number name = "ParameterLength" Length = "2" valueType="hex" endian="network" mutable = "false"/>
+        <Number name = "Data_length" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Error_class" Length = "1" valueType="hex" endian="network" mutable="true" />
+        <Number name = "Error_code" Length = "1" valueType="hex"  endian="network" mutable="true" />
+
+        <Number name = "FunctionCode3" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "ietm_coun3t" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "Specificatio3nType" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "le3n" Length = "1" valueType="hex" endian="network" mutable = "false"/>
+        <Number name = "SyataxI3D" Length = "1" valueType="hex" endian="network" mutable="false" />
+        <Number name = "TransportSize3s" Length = "1" valueType="hex"   endian="network"  mutable="false"/>
+        <Number name = "RequesetDataLengt3h" Length = "2" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "DBnumbe3r" Length = "2" valueType="hex"   endian="network" mutable = "false"/>
+        <Number name = "Aera3" Length = "2" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "Address3" Length = "3" valueType="hex" endian="network" mutable="false" />
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "TransportSize" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data" Length = "4" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "FillByte" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+	</DataModel>
+
+    <DataModel name="Type4" >
+        <Number name = "Protocol_id" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "USERDATA" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex"   endian="network" mutable="true" />
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Data_length" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Error_class" Length = "1" valueType="hex"   endian="network" mutable="true" />
+        <Number name = "Error_code" Length = "1" valueType="hex"   endian="network" mutable="true" />
+
+        <Number name = "FunctionCod4e" Length = "1" valueType="hex"   endian="network" mutable="false" />
+        <Number name = "ietm_coun4t" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "SpecificationTy4pe" Length = "1" valueType="hex"  endian="network" mutable="false" />
+        <Number name = "len4" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "SyataxID4" Length = "1" valueType="hex"   endian="network" mutable="false" />
+        <Number name = "TransportSize4s" Length = "1" valueType="hex"  endian="network" mutable="false" />
+        <Number name = "RequesetDataLeng4th" Length = "2" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "DBnumbe4r" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Aer4a" Length = "2" valueType="hex"  endian="network" mutable="false" /> 
+        <Number name = "Addres4s" Length = "3" valueType="hex"  endian="network"  mutable="false"/>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex" endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"   endian="network" mutable = "false"/>
+        <Blob name = "Data" Length = "4" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "FillByte" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+	</DataModel>
+
+  <DataModel name="Type5" >
+        <Number name = "Protocol_id" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "ACK" Length = "1" valueType="hex" endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex" endian="network" mutable="true" />
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"   endian="network" mutable="true" />
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false"/>
+        <Number name = "Error_class" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "Error_code" Length = "1" valueType="hex"  endian="network" mutable="true" />
+
+        <Number name = "15" valueType = "hex" endian="network"  mutable = "true" />
+        <!-- <Number name = "25FunctionCode" Length = "1" valueType="hex"  endian="network"  mutable="false" />
+        <Number name = "25ietm_count" Length = "1" valueType="hex"   endian="network" mutable="false" />
+        <Number name = "25SpecificationType" Length = "1" valueType="hex" endian="network" mutable="false" />
+        <Number name = "25len" Length = "1" valueType="hex" endian="network" mutable = "false"/>
+        <Number name = "2SyataxID" Length = "1" valueType="hex" endian="network" mutable="false" />
+        <Number name = "25TransportSizes" Length = "1" valueType="hex" endian="network" mutable="false" />
+        <Number name = "2RequesetDataLength" Length = "2" valueType="hex"  endian="network" mutable="false" />
+        <Number name = "2DBnumber" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "2Aera" Length = "2" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "2Address" Length = "3" valueType="hex" endian="network"  mutable="false"/> -->
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data" Length = "4" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "FillByte" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+	</DataModel>
+
+	<StateModel name="ModbusStateModel" initialState="InitialState1">
+
+		<State name="InitialState1">
+
+            <Action type="output">
+                <DataModel ref="Type1"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action>
+            <Action type="call" method="ScoobySnacks" />
+		</State>
+
+        <State name="InitialState2">
+            <Action type="output">
+                <DataModel ref="Type2"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action>
+            <Action type="call" method="ScoobySnacks" />
+		</State>
+        <State name="InitialState3">
+            <Action type="output">
+                <DataModel ref="Type3"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action>
+            <Action type="call" method="ScoobySnacks" />
+		</State>
+        <State name="InitialState4">
+            <Action type="output">
+                <DataModel ref="Type4"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action>
+            <Action type="call" method="ScoobySnacks" />
+		</State>
+        <State name="InitialState5">
+            <Action type="output">
+                <DataModel ref="Type5"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action>
+            <Action type="call" method="ScoobySnacks" />
+		</State>
+
+	</StateModel>
+
+
+	<Agent name="LinAgent" >
+        <Monitor class="Process">
+                    <Param name="Executable" value="./libs7comm/src/analysis/analyze" />
+                    <Param name="Arguments" value=" 11.pcap" /> 
+                    <!-- <Param name="RestartOnEachTest" value="true" /> -->
+                    <Param name="StartOnCall" value="ScoobySnacks" />
+        </Monitor>
+	</Agent>
+
+  
+	<Test name="Default">
+        <Agent ref="LinAgent" platform="linux"/>
+		<StateModel ref="ModbusStateModel"/>
+        <Publisher class="File">
+            <Param name="FileName" value="11.pcap" />
+	        <!-- <Param name = "Overwrite" value = "false"/> -->
+        </Publisher>
+        <!-- <Publisher class="ConsoleHex"/>  -->
+        <Logger class="Filesystem">
+		<Param name="Path" value="Logs" />
+		</Logger>
+	</Test>
+
+</Peach>

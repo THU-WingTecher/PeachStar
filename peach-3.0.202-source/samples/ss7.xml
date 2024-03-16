@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+ 
+
+ 	<DataModel name="Type1" >
+        <Number name = "pid" Length = "1" valueType="hex" value = "32" endian="network"  mutable="true"/>
+        <Number name = "ROSCTR" Length = "1" valueType="hex" value = "01" endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/> 
+        <Number  name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false">
+            <Relation type="size" of="Func1" />
+        </Number>
+        <Number name = "FunctionCod1e" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "ietm_coun1t" Length = "1" valueType="hex"   endian="network"  mutable="false"/>
+        <Block name = "Func1">
+            <Number name = "SpecificationTy1pe" Length = "1" valueType="hex" endian="network" mutable="true" />
+            <Number name = "le1n" Length = "1" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "SyataxI1D" Length = "1" valueType="hex"   endian="network" mutable="true" />
+            <Number name = "Transport1Sizes" Length = "1" valueType="hex"  endian="network" mutable="true" />
+            <Number name = "RequesetDat1aLength" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "DBnumbe1r" Length = "2" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "Ae1ra" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "Addre1ss" Length = "3" valueType="hex"  endian="network"  mutable="true"/>
+        </Block>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data"   valueType="hex"  endian="network" mutable="true" />
+        <Number name = "FillByte" Length = "1" valueType="hex" endian="network" mutable="true" />
+	</DataModel>
+
+    <DataModel name="Type2" >
+        <Number name = "Protocol_id" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "ACK" Length = "1" valueType="hex" endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex" endian="network"  mutable="true"/>
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number  name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false">
+            <Relation type="size" of="Func2*2" />
+        </Number>
+
+        <Number name = "FunctionCode2" Length = "4" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "ietm_cou2nt" Length = "2" valueType="hex"   endian="network" mutable="false" />
+        <Block name = "Func2">
+             <Number name = "SpecificationTy1pe" Length = "1" valueType="hex" endian="network" mutable="true" />
+            <Number name = "le1n" Length = "1" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "SyataxI1D" Length = "1" valueType="hex"   endian="network" mutable="true" />
+            <Number name = "Transport1Sizes" Length = "1" valueType="hex"  endian="network" mutable="true" />
+            <Number name = "RequesetDat1aLength" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "DBnumbe1r" Length = "2" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "Ae1ra" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "Addre1ss" Length = "3" valueType="hex"  endian="network"  mutable="true"/>
+             <Number name = "Specif1icationTy1pe" Length = "1" valueType="hex" endian="network" mutable="true" />
+            <Number name = "le1n1" Length = "1" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "Syat1axI1D" Length = "1" valueType="hex"   endian="network" mutable="true" />
+            <Number name = "Trans1port1Sizes" Length = "1" valueType="hex"  endian="network" mutable="true" />
+            <Number name = "Reque1setDat1aLength" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "DBnumb1e1r" Length = "2" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "Ae1r1a" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "Addr1e1ss" Length = "3" valueType="hex"  endian="network"  mutable="true"/>
+        </Block>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data"   valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "FillByte" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+	</DataModel>
+
+    <DataModel name="Type3" >
+        <Number name = "Protocol_id" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "ACK_DATA" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex" endian="network"  mutable="true"/>
+        <Number name = "PUD_Reference" Length = "2" valueType="hex" endian="network" mutable="true" />
+        <Number name = "ParameterLength" Length = "2" valueType="hex" endian="network" mutable = "false"/>
+        <Number  name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false">
+            <Relation type="size" of="Func3" />
+        </Number>
+        
+        <Number name = "FunctionCode3" Length = "4" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "ietm_coun3t" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Block name = "Func3">
+            <Number name = "SpecificationTy1pe" Length = "1" valueType="hex" endian="network" mutable="true" />
+            <Number name = "le1n" Length = "1" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "SyataxI1D" Length = "1" valueType="hex"   endian="network" mutable="true" />
+            <Number name = "Transport1Sizes" Length = "1" valueType="hex"  endian="network" mutable="true" />
+            <Number name = "RequesetDat1aLength" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "DBnumbe1r" Length = "2" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "Ae1ra" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "Addre1ss" Length = "3" valueType="hex"  endian="network"  mutable="true"/>
+        </Block>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "TransportSize" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "FillByte" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+	</DataModel>
+
+    <DataModel name="Type4" >
+        <Number name = "Protocol_id" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "USERDATA" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex"   endian="network" mutable="true" />
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+         <Number  name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false">
+            <Relation type="size" of="Func3" />
+        </Number>
+        
+        <Number name = "FunctionCod4e" Length = "1" valueType="hex"   endian="network" mutable="false" />
+        <Number name = "ietm_coun4t" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Block name = "Func3">
+          <Number name = "SpecificationTy1pe" Length = "1" valueType="hex" endian="network" mutable="true" />
+            <Number name = "le1n" Length = "1" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "SyataxI1D" Length = "1" valueType="hex"   endian="network" mutable="true" />
+            <Number name = "Transport1Sizes" Length = "1" valueType="hex"  endian="network" mutable="true" />
+            <Number name = "RequesetDat1aLength" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "DBnumbe1r" Length = "2" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "Ae1ra" Length = "2" valueType="hex"  value = "85"   endian="network"  mutable="true"/>
+            <Number name = "Addre1ss" Length = "3" valueType="hex"  endian="network"  mutable="true"/>
+        </Block>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex" endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"   endian="network" mutable = "false"/>
+        <Blob name = "Data"  valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "FillByte" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+	</DataModel>
+
+  <DataModel name="Type5" >
+        <Number name = "Protocol_id" Length = "4" valueType="hex"   endian="network"  mutable="true"/>
+        <Number name = "ACK" Length = "1" valueType="hex" endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex" endian="network" mutable="true" />
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"   endian="network" mutable="true" />
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number  name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false"/> 
+        
+        <Number name = "15" valueType = "hex" endian="network"  mutable = "true" />
+        <!-- <Number name = "25FunctionCode" Length = "1" valueType="hex"  endian="network"  mutable="false" />
+        <Number name = "25ietm_count" Length = "1" valueType="hex"   endian="network" mutable="false" />
+        <Number name = "25SpecificationType" Length = "1" valueType="hex" endian="network" mutable="false" />
+        <Number name = "25len" Length = "1" valueType="hex" endian="network" mutable = "false"/>
+        <Number name = "2SyataxID" Length = "1" valueType="hex" endian="network" mutable="false" />
+        <Number name = "25TransportSizes" Length = "1" valueType="hex" endian="network" mutable="false" />
+        <Number name = "2RequesetDataLength" Length = "2" valueType="hex"  endian="network" mutable="false" />
+        <Number name = "2DBnumber" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+        <Number name = "2Aera" Length = "2" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "2Address" Length = "3" valueType="hex" endian="network"  mutable="false"/> -->
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "FillByte" Length = "1" valueType="hex"   endian="network"  mutable="true"/>
+	</DataModel>
+
+     	<DataModel name="Type6" >
+        <Number name = "pid" Length = "1" valueType="hex" value = "32" endian="network"  mutable="true"/>
+        <Number name = "ROSCTR" Length = "1" valueType="hex" value = "01" endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+         <Number  name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false">
+            <Relation type="size" of="Func4" />
+        </Number>
+        
+        <Number name = "FunctionCod7e" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "ietm_coun17t" Length = "1" valueType="hex"   endian="network"  mutable="false"/>
+        <Block name = "Func4">
+           <Number name = "SpecificationTy1pe" Length = "1" valueType="hex" endian="network" mutable="true" />
+            <Number name = "le1n" Length = "1" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "SyataxI1D" Length = "1" valueType="hex"   endian="network" mutable="true" />
+            <Number name = "Transport1Sizes" Length = "1" valueType="hex"  endian="network" mutable="true" />
+            <Number name = "RequesetDat1aLength" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "DBnumbe1r" Length = "2" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "Ae1ra" Length = "2" valueType="hex"  value = "81"  endian="network"  mutable="true"/>
+            <Number name = "Addre1ss" Length = "3" valueType="hex"  endian="network"  mutable="true"/>
+        </Block>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data" Length = "4" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "FillByte" Length = "1" valueType="hex" endian="network" mutable="true" />
+	</DataModel>
+
+     	<DataModel name="Type7" >
+        <Number name = "pid" Length = "1" valueType="hex" value = "32" endian="network"  mutable="true"/>
+        <Number name = "ROSCTR" Length = "1" valueType="hex" value = "01" endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+         <Number  name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false">
+            <Relation type="size" of="Func5" />
+        </Number>
+        
+        <Number name = "Function66Cod1e" Length = "4" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "ietm_cou6n61t" Length = "1" valueType="hex"   endian="network"  mutable="false"/>
+        <Block name = "Func5">
+         <Number name = "SpecificationTy1pe" Length = "1" valueType="hex" endian="network" mutable="true" />
+            <Number name = "le1n" Length = "1" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "SyataxI1D" Length = "1" valueType="hex"   endian="network" mutable="true" />
+            <Number name = "Transport1Sizes" Length = "1" valueType="hex"  endian="network" mutable="true" />
+            <Number name = "RequesetDat1aLength" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "DBnumbe1r" Length = "2" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "Ae1ra" Length = "2" valueType="hex"  value = "84"  endian="network"  mutable="true"/>
+            <Number name = "Addre1ss" Length = "3" valueType="hex"  endian="network"  mutable="true"/>
+        </Block>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data"  valueType="hex"  endian="network" mutable="true" />
+        <Number name = "FillByte" Length = "1" valueType="hex" endian="network" mutable="true" />
+	</DataModel>
+
+     	<DataModel name="Type8" >
+        <Number name = "pid" Length = "1" valueType="hex" value = "32" endian="network"  mutable="true"/>
+        <Number name = "ROSCTR" Length = "1" valueType="hex" value = "01" endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+         <Number  name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false">
+            <Relation type="size" of="Func6" />
+        </Number>
+        
+        <Number name = "Func55tionCod1e" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "iet55m_coun1t" Length = "1" valueType="hex"   endian="network"  mutable="false"/>
+        <Block name = "Func6">
+ <Number name = "SpecificationTy1pe" Length = "1" valueType="hex" endian="network" mutable="true" />
+            <Number name = "le1n" Length = "1" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "SyataxI1D" Length = "1" valueType="hex"   endian="network" mutable="true" />
+            <Number name = "Transport1Sizes" Length = "1" valueType="hex"  endian="network" mutable="true" />
+            <Number name = "RequesetDat1aLength" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "DBnumbe1r" Length = "2" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "Ae1ra" Length = "2" valueType="hex"  value = "83"  endian="network"  mutable="true"/>
+            <Number name = "Addre1ss" Length = "3" valueType="hex"  endian="network"  mutable="true"/>
+        </Block>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data"   valueType="hex"  endian="network" mutable="true" />
+        <Number name = "FillByte" Length = "1" valueType="hex" endian="network" mutable="true" />
+	</DataModel>
+
+     	<DataModel name="Type9" >
+        <Number name = "pid" Length = "1" valueType="hex" value = "32" endian="network"  mutable="true"/>
+        <Number name = "ROSCTR" Length = "1" valueType="hex" value = "01" endian="network" mutable = "false"/>
+        <Number name = "Resereved" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "PUD_Reference" Length = "2" valueType="hex"  endian="network" mutable="true" />
+        <Number name = "ParameterLength" Length = "2" valueType="hex"  endian="network" mutable = "false"/>
+         <Number  name = "Data_length" Length = "2" valueType="hex"   endian="network" mutable = "false">
+            <Relation type="size" of="Func7" />
+        </Number>
+        
+        <Number name = "Functi44onCod1e" Length = "1" valueType="hex"  endian="network"  mutable="false"/>
+        <Number name = "ietm_44coun1t" Length = "1" valueType="hex"   endian="network"  mutable="false"/>
+        <Block name = "Func7">
+            <Number name = "SpecificationTy1pe" Length = "1" valueType="hex" endian="network" mutable="true" />
+            <Number name = "le1n" Length = "1" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "SyataxI1D" Length = "1" valueType="hex"   endian="network" mutable="true" />
+            <Number name = "Transport1Sizes" Length = "1" valueType="hex"  endian="network" mutable="true" />
+            <Number name = "RequesetDat1aLength" Length = "2" valueType="hex"  endian="network"  mutable="true"/>
+            <Number name = "DBnumbe1r" Length = "2" valueType="hex"  endian="network" mutable = "true"/>
+            <Number name = "Ae1ra" Length = "2" valueType="hex" value = "82"  endian="network"  mutable="true"/>
+            <Number name = "Addre1ss" Length = "3" valueType="hex"  endian="network"  mutable="true"/>
+        </Block>
+
+        <Number name = "ReturnCode" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "TransportSize" Length = "1" valueType="hex"  endian="network"  mutable="true"/>
+        <Number name = "Length" Length = "1" valueType="hex"  endian="network" mutable = "false"/>
+        <Blob name = "Data"   valueType="hex"  endian="network" mutable="true" />
+        <Number name = "FillByte" Length = "1" valueType="hex" endian="network" mutable="true" />
+	</DataModel>
+
+	<StateModel name="ModbusStateModel" initialState="InitialState1">
+
+		<State name="InitialState1">
+
+            <Action type="output">
+                <DataModel ref="Type1"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action> 
+		</State>
+
+        <State name="InitialState2">
+            <Action type="output">
+                <DataModel ref="Type2"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action> 
+		</State>
+        <State name="InitialState3">
+            <Action type="output">
+                <DataModel ref="Type3"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action> 
+		</State>
+        <State name="InitialState4">
+            <Action type="output">
+                <DataModel ref="Type4"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action> 
+		</State>
+        <State name="InitialState5">
+            <Action type="output">
+                <DataModel ref="Type5"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action> 
+		</State>
+        <State name="InitialState6">
+            <Action type="output">
+                <DataModel ref="Type6"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action> 
+		</State>
+        <State name="InitialState7">
+            <Action type="output">
+                <DataModel ref="Type7"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action> 
+		</State>
+        <State name="InitialState8">
+            <Action type="output">
+                <DataModel ref="Type8"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action> 
+		</State>
+        <State name="InitialState9">
+            <Action type="output">
+                <DataModel ref="Type9"/>
+                <!-- <Data fileName="11.pcap"/>  -->
+            </Action> 
+		</State> 
+	</StateModel>
+
+
+	<Agent name="LinAgent" >
+        <Monitor class="Process">
+                    <Param name="Executable" value="./s7parser" />
+                    <Param name="Arguments" value="  pro.pcap pp.pcap 24010" /> 
+                    <Param name="RestartOnEachTest" value="true" /> 
+                    <!-- <Param name="StartOnCall" value="ScoobySnacks" /> -->
+        </Monitor>
+	</Agent>
+
+  
+	<Test name="Default">
+        <Agent ref="LinAgent" platform="linux"/>
+		<StateModel ref="ModbusStateModel"/>
+        <Publisher class="Tcp">
+				<Param name="Host" value="127.0.0.1" />
+					<Param name="Port" value="24010" />
+			</Publisher>
+        <!-- <Publisher class="ConsoleHex"/>  -->
+        <Logger class="Filesystem">
+		<Param name="Path" value="Logs" />
+		</Logger>
+	</Test>
+
+</Peach>

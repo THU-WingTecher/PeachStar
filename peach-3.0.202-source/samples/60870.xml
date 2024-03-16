@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+
+    <DataModel name="Type1" >
+                <Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network"  mutable="true"/>
+                <Number name="len" size="8" valueType="hex"  endian="network"  mutable="true"/>
+                <Number name="sequence_num(send)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num1(send)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num(recv)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num1(recv)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+
+                <Block name = "ID">
+                    <Number name="Typ1eID" size="8" valueType="hex" value = "0" endian="network"  mutable="false"/>
+                    <Number name="SQ1" size="1" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="Nu1mberofObject" size="7" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="T1" size="1" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="P/1N" size="1" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="Ca1useofTranssion" valueType="hex" size="6" value = "0"  endian="network"  mutable="false" />
+                    <Number name="Orig1inatorAddress" valueType="hex" size="8" value = "0" endian="network"  mutable="false"/>
+                </Block>
+
+                <Number name="ASDU address" valueType="hex" size="16" endian="network" mutable="true" />
+                <Blob name="Information Object" Length = "2" valueType="hex" value="00000" mutable="true"/>
+                <Blob name = "fill" Length = "3" valueType = "hex" endian = "network"  mutable="true"/>
+    </DataModel>
+
+    <DataModel name="Type2" >
+                <Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+                <Number name="len" size="8" valueType="hex"  endian="network" />
+                <Number name="sequence_num(send)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num1(send)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num(recv)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num1(recv)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+
+                <Block name = "ID">
+                    <Number name="Ty2peID" size="8" valueType="hex" value = "1" endian="network"  mutable="false"/>
+                    <Number name="S2Q" size="1" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="Nu2mberofObject" size="7" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="T2" size="1" valueType="hex" value = "0"  endian="network"  mutable="false" />
+                    <Number name="P/2N" size="1" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="Cau2seofTranssion" valueType="hex" size="6" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="Originat2orAddress" valueType="hex" size="8" value = "0" endian="network"  mutable="false"/>
+                </Block>
+
+                <Number name="ASDU address" valueType="hex" size="16"  endian="network" mutable="true" />
+                <Blob name="Information Object" Length = "2" valueType="hex" value="00000" mutable="true"/>
+                <Blob name = "fill" Length = "3" valueType = "hex" endian = "network" mutable="true" />
+    </DataModel>
+
+    <DataModel name="Type3" >
+                <Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network"  mutable="true"/>
+                <Number name="len" size="8" valueType="hex"  endian="network" mutable="true" />
+                <Number name="sequence_num(send)" size="8" valueType="hex" value = "00" endian="network" mutable="true" />
+                <Number name="sequence_num1(send)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num(recv)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num1(recv)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+
+                <Block name = "ID">
+                    <Number name="Type3ID" size="8" valueType="hex" value = "1" endian="network"  mutable="false"/>
+                    <Number name="S3Q" size="1" valueType="hex" value = "1"  endian="network"  mutable="false"/>
+                    <Number name="Numbe3rofObject" size="7" valueType="hex" value = "0"  endian="network" mutable="false" />
+                    <Number name="T3" size="1" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="P/3N" size="1" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="Cause3ofTranssion" valueType="hex" size="6" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="Originat3orAddress" valueType="hex" size="8" value = "0" endian="network"  mutable="false"/>
+                </Block>
+
+                <Number name="ASDU address" valueType="hex" size="16"  endian="network" mutable="true" />
+                <Blob name="Information Object" Length = "2" valueType="hex" value="00000" mutable="true"/>
+                <Blob name = "fill" Length = "3" valueType = "hex" endian = "network"  mutable="true"/>
+    </DataModel>
+
+
+    <DataModel name="Type4" >
+                <Number name="Start Character" size="8" valueType="hex" value = "68"  endian="network" mutable="true" />
+                <Number name="len" size="8" valueType="hex"  endian="network" mutable="true" />
+                <Number name="sequence_num(send)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num1(send)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num(recv)" size="8" valueType="hex" value = "00" endian="network"  mutable="true"/>
+                <Number name="sequence_num1(recv)" size="8" valueType="hex" value = "00" endian="network" mutable="true" />
+                <Number name = "FunctionC" Length = "4" valueType = "hex"  endian="network" mutable = "true"/>
+                <!-- <Block name = "ID">
+                    <Number name="TypeID3" size="8" valueType="hex" value = "1" endian="network" mutable="false" />
+                    <Number name="SQ3" size="1" valueType="hex" value = "1"  endian="network"  mutable="false"/>
+                    <Number name="NumberofObje3ct" size="7" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="T3" size="1" valueType="hex" value = "0"  endian="network" mutable="false" />
+                    <Number name="P/N3" size="1" valueType="hex" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="CauseofTranssio3n" valueType="hex" size="6" value = "0"  endian="network"  mutable="false"/>
+                    <Number name="OriginatorAddress3" valueType="hex" size="8" value = "0" endian="network" mutable="false" />
+                </Block> -->
+
+                <Number name="ASDU address" valueType="hex" size="16"  endian="network"  mutable="true"/>
+                <Blob name="Information Object" Length = "2" valueType="hex" value="00000" mutable="true"/>
+                <Blob name = "fill" Length = "3" valueType = "hex" endian = "network" mutable="true" />
+    </DataModel>
+
+
+    <StateModel name="ModbusStateModel" initialState="InitialState">
+        <State name="InitialState">
+            <Action type="output">
+                <DataModel ref="Type1" />
+            </Action>
+        </State>
+
+        <State name="InitialState2">
+            <Action type="output">
+                <DataModel ref="Type2" />
+            </Action>
+        </State>
+
+        <State name="InitialState3">
+            <Action type="output">
+                <DataModel ref="Type3" />
+            </Action>
+        </State>
+
+        <State name="InitialState4">
+            <Action type="output">
+                <DataModel ref="Type4" />
+            </Action>
+        </State>
+
+    </StateModel>
+
+    <Agent name="LinAgent" >
+        <Monitor class="Process">
+                <Param name="Executable" value="./lib60870/lib60870/lib60870-C/examples/cs101_slave/cs101_slave" />
+                <Param name="Arguments" value=" /dev/tty" />
+                <Param name="RestartOnEachTest" value="true" />
+        </Monitor>
+    </Agent>
+
+    <Test name="Default">
+        <Agent ref="LinAgent" platform="linux"/>
+        <StateModel ref="ModbusStateModel"/>
+        <!-- <Publisher class="Tcp">
+            <Param name="Host" value="192.168.2.9" />
+            <Param name="Port" value="12834" />
+        </Publisher>
+            <Publisher class="Tcp">
+            <Param name="Host" value="192.168.2.223" />
+            <Param name="Port" value="12234" />
+        </Publisher>  -->
+    <Publisher class="Null" />
+        <Logger class="Filesystem">
+            <Param name="Path" value="Logs" />
+        </Logger>
+    </Test>
+
+
+</Peach>
+<!-- end -->

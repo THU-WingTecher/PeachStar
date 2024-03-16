@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+deps = [
+	'System.dll',
+	'System.Core.dll',
+	'nunit.framework.dll',
+	'NLog.dll',
+	'Peach.Core.dll',
+	'Peach.Core.OS.Linux.dll',
+]
+
+bld(
+	features = 'cs linux test',
+	use = deps,
+	source = bld.path.ant_glob('**/*.cs'),
+	name = 'Peach.Core.Test.OS.Linux.dll',
+)

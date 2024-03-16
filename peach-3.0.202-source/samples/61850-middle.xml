@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+
+ 	<DataModel name="Type1" > 
+
+			<Number name="Start" size="8" valueType="hex" value = "0" endian="network" /> 
+			<Blob name = "mac" size = "96" valueType = "hex" endian = "network" />
+			<Number name = "TPID" size = "16" valueType="hex" value = "8100"  endian="network" /> 
+			<Number name = "TCI" size = "16" valueType="hex" value = "4000" endian="network" /> 
+			<Number name = "ETHERNET_TYPE" size = "16" valueType="hex" value = "88BA" endian="network" /> 
+			<Number name = "APPID" size = "16" valueType="hex" value = "4000" endian="network" /> 
+			<Blob name = "fill" size = "112" valueType = "hex" endian = "network" />
+            
+	</DataModel>
+
+
+
+	<DataModel name="Type2" > 
+			<Number name="Start" size="8" valueType="hex" value = "0" endian="network" /> 
+			<Blob name = "mac" size = "96" valueType = "hex" endian = "network" />
+			<Number name = "TPID" size = "16" valueType="hex" value = "8100"  endian="network" /> 
+			<Number name = "TCI" size = "16" valueType="hex" value = "4201" endian="network" />
+			<Number name = "HSR_tag" size = "16" valueType="hex" value = "892F" endian="network"  mutable="false"/> 
+			<Number name = "path" size = "8" valueType="hex" value = "32" endian="network" /> 
+			<Number name = "endian" size = "8" valueType="hex" value = "14" endian="network" /> 
+			<Number name = "high" size = "8" valueType="hex" value = "71" endian="network" /> 
+			<Number name = "low" size = "8" valueType="hex" value = "26" endian="network" /> 			
+			<Number name = "ETHERNET_TYPE" size = "16" valueType="hex" value = "88BA" endian="network" /> 
+			<Number name = "APPID" size = "16" valueType="hex" value = "4000" endian="network" /> 
+			<Blob name = "fill" size = "112" valueType = "hex" endian = "network" />
+
+	</DataModel>
+
+
+
+	<DataModel name="Type3" > 
+			<Number name="Start" size="8" valueType="hex" value = "0" endian="network" /> 
+			<Blob name = "mac" size = "96" valueType = "hex" endian = "network" />
+			<Number name = "TPID" size = "16" valueType="hex" value = "8100"  endian="network" />
+			<Number name = "TCI" size = "16" valueType="hex" value = "4201" endian="network" /> 
+			<Number name = "ETHERNET_TYPE" size = "16" valueType="hex" value = "88BA" endian="network" /> 
+			<Number name = "APPID" size = "16" valueType="hex" value = "4000" endian="network" /> 
+			<Number name = "length" size = "16" valueType="hex" value = "0000" endian="network" /> 
+			<Number name = "APDU" size = "64" valueType="hex" endian="network" /> 
+			<Number name = "high" size = "8" valueType="hex" value = "71" endian="network" /> 
+			<Number name = "low" size = "8" valueType="hex" value = "26" endian="network" /> 
+			<Number name = "path" size = "8" valueType="hex" value = "32" endian="network" /> 
+			<Number name = "hhh" size = "56" valueType="hex" value = "14" endian="network" />  
+
+	</DataModel>
+
+
+
+	<StateModel name="ModbusStateModel" initialState="InitialState1">
+
+		<State name="InitialState1">
+			<Action type="output">
+				<DataModel ref="Type1" />
+			</Action>
+		</State>
+		<State name="InitialState2">
+			<Action type="output">
+				<DataModel ref="Type2" />
+			</Action>
+		</State>
+		<State name="InitialState3">
+			<Action type="output">
+				<DataModel ref="Type3" />
+			</Action>
+		</State>
+	</StateModel>
+
+
+	<Agent name="LinAgent" >
+	<Monitor class="Process">
+				<Param name="Executable" value="./libiec61850/examples/server_example_basic_io/server_example_basic_io" />
+				<Param name="Arguments" value=" 12400" /> 
+				<Param name="RestartOnEachTest" value="true" />
+	</Monitor>
+	</Agent>
+
+
+
+	<Test name="Default">
+        <Agent ref="LinAgent" platform="linux"/>
+		<StateModel ref="ModbusStateModel"/>
+        <Publisher class="Tcp">
+			<Param name="Host" value="127.0.0.1" />
+			<Param name="Port" value="12400" />
+		</Publisher>
+
+        <Publisher class="ConsoleHex"/>
+        <Logger class="Filesystem">			
+		<Param name="Path" value="Logs" />
+		</Logger>
+	</Test>
+
+</Peach> 
+
+
+
+
+
+

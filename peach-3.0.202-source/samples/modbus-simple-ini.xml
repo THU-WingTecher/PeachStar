@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+
+
+	<DataModel name="ModbusPDU1ReadCoilsRequest" >
+        <Block name="Header">
+		  <!-- Modbus Header -->
+		  <Number name="trans_id" size="16" value="0000" valueType="hex"  endian="network" mutable="false">
+			<!-- <Fixup class="SequenceIncrementFixup" /> -->
+		  </Number>
+		  <Number name="proto_id" size="16"  value="0000" valueType="hex"  endian="network" mutable="false" />
+		  <!-- len = PDU + 1 (unit_id) -->
+		  <Number name="len" size="16" value="0006" valueType="hex" endian="network" mutable="false">
+			<Relation type="size" of="PDU" />
+		  </Number>
+		  
+		</Block>
+
+
+
+		<Block name="PDU">
+            <Number name="unit_id" size="8" value="01" valueType="hex" endian="network" mutable="false" />
+		  <!-- 0x01 1 Read Coils -->
+		  <Number name="func_code" size="8" value="01" valueType="hex" endian="network" mutable="false" />
+		  <Number name="start_addr" size="16" value="3006" valueType="hex" endian="network" mutable="false" />
+		  <Number name="qty" size="16" value="0001" valueType="hex" endian="network" mutable="false" />
+		</Block>
+	</DataModel>
+
+	<StateModel name="ModbusStateModel" initialState="InitialState">
+		<State name="InitialState">
+			<Action type="output">
+				<DataModel ref="ModbusPDU1ReadCoilsRequest" />
+			</Action> 
+		</State>
+	</StateModel>
+		
+
+	<Agent name="LinAgent" >
+		<Monitor class="Process">
+						<Param name="RestartOnEachTest" value="true" />
+						<Param name="Executable" value="./libmodbus-3.1.4/tests/server" />
+						<!-- <Param name="StartOnCall" value="Start" /> -->
+						<Param name="Arguments" value=" 13320" />
+						
+		</Monitor>
+	</Agent>
+
+	<Test name="Default">
+		<Agent ref="LinAgent" platform="linux"/>
+		<StateModel ref="ModbusStateModel"/>
+			<Publisher class="Tcp">
+				<Param name="Host" value="127.0.0.1" />
+					<Param name="Port" value="13320" />
+			</Publisher> 
+        
+			<Logger class="Filesystem">
+			<Param name="Path" value="Logs" />
+			</Logger>
+	</Test>
+
+<!--	<Test name="Default">
+		<StateModel ref="ModbusStateModel" />
+					
+		<Publisher class="tcp.Tcp">
+			<Param name="Host" value="192.168.1.1"/>
+			<Param name="Port" value="502"/>
+		</Publisher>
+	</Test>-->
+
+</Peach>
+<!-- end -->

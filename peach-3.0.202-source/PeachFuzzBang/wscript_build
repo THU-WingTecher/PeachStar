@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+
+deps = [
+	'System.Drawing.dll',
+	'System.Windows.Forms.dll',
+	'System.ServiceProcess.dll',
+	'Peach.Core.dll',
+	'NLog.dll',
+	'SharpPcap.dll',
+	'System.Runtime.Remoting.dll',
+	'System.dll',
+	'System.Management.dll',
+	'System.Xml.dll',
+	'System.Core.dll',
+	'System.Data.dll',
+	'System.Web.dll',
+	'Ionic.Zip.dll',
+	'IronPython.dll',
+	'IronPython.Modules.dll',
+	'IronRuby.dll',
+	'IronRuby.Libraries.dll',
+	'IronRuby.Libraries.Yaml.dll',
+	'Microsoft.Dynamic.dll',
+	'Microsoft.CSharp.dll',
+	'Microsoft.Scripting.dll',
+	'Microsoft.Scripting.Metadata.dll',
+]
+
+bld(
+	features = 'cs',
+	use = deps,
+	source = bld.path.ant_glob('**/*.cs **/*.resx'),
+	resource = 'Introduction.rtf LinuxDebugging.rtf OSXDebugging.rtf',
+	name = 'PeachFuzzBang.exe',
+	bintype = 'winexe',
+	icon = 'peach-line.ico',
+	install = bld.path.ant_glob('samples_png/*'),
+)
+
